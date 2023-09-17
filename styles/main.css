@@ -1,1 +1,124 @@
 
+:root {
+    --vertical-space: 2rem;
+    --horizontal-space: 3rm;
+
+    --light-color: rgb(212, 212, 212);
+    --body-color: rgb(74, 5, 152);
+    --heading-color: ;
+}
+
+body {
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: 'Roboto Mono', monospace;
+    background-image: repeating-linear-gradient(135deg, hsla(264,0%,88%,0.03) 0px, hsla(264,0%,88%,0.03) 1px,transparent 1px, transparent 12px),
+    repeating-linear-gradient(45deg, hsla(264,0%,88%,0.03) 0px, hsla(264,0%,88%,0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(67.5deg,
+    hsla(264,0%,88%,0.03) 0px, hsla(264,0%,88%,0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(135deg, hsla(264,0%,88%,0.03) 0px,
+    hsla(264,0%,88%,0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(45deg, hsla(264,0%,88%,0.03) 0px, hsla(264,0%,88%,0.03) 1px,
+    transparent 1px, transparent 12px),repeating-linear-gradient(112.5deg, hsla(264,0%,88%,0.03) 0px, hsla(264,0%,88%,0.03) 1px,transparent 1px, transparent 12px),
+    repeating-linear-gradient(112.5deg, hsla(264,0%,88%,0.03) 0px, hsla(264,0%,88%,0.03) 1px,transparent 1px, transparent 12px),
+    repeating-linear-gradient(45deg, hsla(264,0%,88%,0.03) 0px, hsla(264,0%,88%,0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(22.5deg,
+    hsla(264,0%,88%,0.03) 0px, hsla(264,0%,88%,0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(45deg, hsla(264,0%,88%,0.03) 0px,
+    hsla(264,0%,88%,0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(22.5deg, hsla(264,0%,88%,0.03) 0px, hsla(264,0%,88%,0.03) 1px,
+    transparent 1px, transparent 12px),repeating-linear-gradient(135deg, hsla(264,0%,88%,0.03) 0px, hsla(264,0%,88%,0.03) 1px,transparent 1px, transparent 12px),
+    repeating-linear-gradient(157.5deg, hsla(264,0%,88%,0.03) 0px, hsla(264,0%,88%,0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(67.5deg,
+    hsla(264,0%,88%,0.03) 0px, hsla(264,0%,88%,0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(67.5deg, hsla(264,0%,88%,0.03) 0px,
+    hsla(264,0%,88%,0.03) 1px,transparent 1px, transparent 12px),linear-gradient(90deg, rgb(151, 26, 210),rgb(57, 199, 205));
+    color: var(--body-color);
+}
+
+main {
+    background-color: rgba(212, 212, 212, .6);
+}
+
+header, nav {
+    color: var(--light-color);
+}
+
+a, a:visited {
+    text-decoration: underline;
+    color: var(--light-color);
+}
+
+h1, h2, h3 {
+    line-height: 1.2
+}
+
+body#about img {
+    height: 15em;
+    display: inline;
+    float: left;
+    margin-right: var(--horizontal-space);
+}
+
+body#portfolio ul#portfolioItems img{
+    height: 15em;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    list-style-type: none;
+    padding: 0;
+}
+
+body#portfolio #ul#portfolioItems li {
+    flex-basis: 48%;
+    padding-right: 2%
+}
+
+p {
+    max-width: 50em;
+}
+
+body {
+    display: grid;
+    grid-template-areas: "head head"
+                         "nav main"
+                         "foot foot";
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto auto 1fr auto;
+}
+
+@media screen and (min-width: 25em) {
+    body {
+        grid-template-areas: "head head"
+                             "nav main"
+                             "foot foot";
+        grid-template-rows: auto 1fr auto;
+    }
+}
+
+body > nav {
+    grid-area: nav;
+}
+
+body > nav ul {
+    list-style-type: none;
+}
+
+body > nav ul li {
+    display: inline;
+    padding-right: 1rem;
+}
+
+body > main {
+    padding-left: 1rem;
+    width: 60em;
+    grid-area: main;
+}
+
+body > footer {
+    grid-area: foot;
+}
+
+header, footer {
+    margin-left: 1em;
+    padding-top: 3rem;
+    padding-bottom: 1.33rem;
+    color: var(--light-color);
+}
+
+header h1, footer h1 {
+    margin: 0;
+}
+
